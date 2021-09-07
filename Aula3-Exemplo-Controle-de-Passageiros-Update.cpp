@@ -4,9 +4,10 @@
 #include <iostream>
 #include <locale.h>
 #include <string>
+#define LIM 3
 using namespace std;
 
-	struct passageiros
+	struct Passageiros
 	{
 		char nomeDoPassageiro[30], origem[20], destino[20], numeroDaPassagem[15], identidade[15], tel[15];
 	};
@@ -15,58 +16,36 @@ int main(){
 	
 	setlocale(LC_ALL,"Portuguese");
 	
-	int i, ii;
-
-	passageiros passageiro1;
-	passageiros passageiro2;
-	passageiros	passageiro3;
-	
+	int x;
+	Passageiros passageiro[LIM];	
 
 	cout<<"\nSistema de registro de passageiros"<<endl;
-	cout<<"Informe o nome do passageiro:\t";cin.getline(passageiro1.nomeDoPassageiro,30);
-	cout<<"Informe a origem:\t\t";cin.getline(passageiro1.origem,20);
-	cout<<"Informe o destino:\t\t";cin.getline(passageiro1.destino,20);
-	cout<<"Informe o número da Passagem:\t";cin.getline(passageiro1.numeroDaPassagem,15);
-	cout<<"Informe o número da Identidade:\t";cin.getline(passageiro1.identidade,15);
-	cout<<"Informe o número do telefone:\t";cin.getline(passageiro1.tel,15);
 	
-	cout<<"\nInforme o nome do passageiro:\t";cin.getline(passageiro2.nomeDoPassageiro,30);
-	cout<<"Informe a origem:\t\t";cin.getline(passageiro2.origem,20);
-	cout<<"Informe o destino:\t\t";cin.getline(passageiro2.destino,20);
-	cout<<"Informe o número da Passagem:\t";cin.getline(passageiro2.numeroDaPassagem,15);
-	cout<<"Informe o número da Identidade:\t";cin.getline(passageiro2.identidade,15);
-	cout<<"Informe o número do telefone:\t";cin.getline(passageiro2.tel,15);
+	//Loop para entrada de dados dos passageiros
+	for(x=0 ; x<LIM; x++)
+	{
+		cout<<"----------------------------------"<<endl;
+		cout<<"Informe o nome do passageiro:\t";cin>>passageiro[x].nomeDoPassageiro;
+		cout<<"Informe a origem:\t\t";cin>>passageiro[x].origem;
+		cout<<"Informe o destino:\t\t";cin>>passageiro[x].destino;
+		cout<<"Informe o número da Passagem:\t";cin>>passageiro[x].numeroDaPassagem;
+		cout<<"Informe o número da Identidade:\t";cin>>passageiro[x].identidade;
+		cout<<"Informe o número do telefone:\t";cin>>passageiro[x].tel;
+	}
 
-	cout<<"\nInforme o nome do passageiro:\t";cin.getline(passageiro3.nomeDoPassageiro,30);
-	cout<<"Informe a origem:\t\t";cin.getline(passageiro3.origem,20);
-	cout<<"Informe o destino:\t\t";cin.getline(passageiro3.destino,20);
-	cout<<"Informe o número da Passagem:\t";cin.getline(passageiro3.numeroDaPassagem,15);
-	cout<<"Informe o número da Identidade:\t";cin.getline(passageiro3.identidade,15);
-	cout<<"Informe o número do telefone:\t";cin.getline(passageiro3.tel,15);
-	
 	system("pause");
 	system("cls");
 
 	cout<<"Exibindo os dados armazenados na etapa de cadastro\n";
 
-	cout<<"\n++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++";
-	cout<<"\nNome do Passageiro: "<<passageiro1.nomeDoPassageiro;
-	cout<<"\nOrigem: "<<passageiro1.origem<<"\t\tDestino: "<<passageiro1.destino;
-	cout<<"\nNúmero da Passagem: "<<passageiro1.numeroDaPassagem<<"\tIdentidade: "<<passageiro1.identidade<<"\tTelefone: "<<passageiro1.tel;
-	cout<<"\n++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n";
-	
-	cout<<"\n++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++";
-	cout<<"\nNome do Passageiro: "<<passageiro2.nomeDoPassageiro;
-	cout<<"\nOrigem: "<<passageiro2.origem<<"\t\tDestino: "<<passageiro2.destino;
-	cout<<"\nNúmero da Passagem: "<<passageiro2.numeroDaPassagem<<"\tIdentidade: "<<passageiro2.identidade<<"\tTelefone: "<<passageiro2.tel;
-	cout<<"\n++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n";
-	
-	cout<<"\n++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++";
-	cout<<"\nNome do Passageiro: "<<passageiro3.nomeDoPassageiro;
-	cout<<"\nOrigem: "<<passageiro3.origem<<"\t\tDestino: "<<passageiro3.destino;
-	cout<<"\nNúmero da Passagem: "<<passageiro3.numeroDaPassagem<<"\tIdentidade: "<<passageiro3.identidade<<"\tTelefone: "<<passageiro3.tel;
-	cout<<"\n++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n";
-	
+	//Loop para exibição dos dados armazenados
+	for(x=0 ; x<LIM; x++)
+	{
+		cout<<"\n++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++";
+		cout<<"\nNome do Passageiro: "<<passageiro[x].nomeDoPassageiro;
+		cout<<"\nOrigem: "<<passageiro[x].origem<<"\t\tDestino: "<<passageiro[x].destino;
+		cout<<"\nNúmero da Passagem: "<<passageiro[x].numeroDaPassagem<<"\tIdentidade: "<<passageiro[x].identidade<<"\tTelefone: "<<passageiro[x].tel<<endl;
+	}
 	
 	cout<<"\n";
 	system("pause");
