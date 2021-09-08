@@ -5,6 +5,7 @@
 #include <string>
 using namespace std;
 
+	
 int main(){
 	
 	setlocale(LC_ALL,"Portuguese");
@@ -12,10 +13,11 @@ int main(){
 	struct aviao
 	{
 		char nomeDoPassageiro[30], origem[20], destino[20], numeroDaPassagem[15], identidade[15], tel[15];
-	}
-	passageiro1=("Mr Lopes, João","Brasil","Londres","Gol 1234", "IFP222222222222", "21111111111"),
-	passageiro2=("Mrs Lopes, Tereza","Brasil","Paris","Gol 1234", "IFP333333333333", "21222222222"),
-	passageiro3=("Mr Ferreira, Marcelo","Brasil","Lisboa","Gol 1239", "IFP444444444444", "21333333333");
+	};
+	
+	aviao passageiro1={"Mr Lopes, João","Brasil","Londres","Gol 1234", "IFP2222222222", "21111111111"};
+	aviao passageiro2={"Mrs Lopes, Tereza","Brasil","Paris","Gol 1234", "IFP3333333333", "21222222222"};
+	aviao passageiro3={"Mr Ferreira, Marcelo","Brasil","Lisboa","Gol 1239", "IFP4444444444", "21333333333"};
 	
 	system("cls");
 	cout<<"\n++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++";
